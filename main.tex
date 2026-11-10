@@ -1,17 +1,16 @@
-\documentclass[a4paper,10pt, fleqn,final]{meta/notes}
+\documentclass[letterpaper, 11pt, final]{meta/notes}
 
 
 % Lecture, professors and author (with university and dept.), date and version.
 \lecture{4\textsuperscript{th} School On Underground Physics}
 \class{Theory \& Experiments}
-% \professor{Carlo Schiavi}
-% \professor{Daniele Marrè}
-\author{Mattia Sotgia}
-\university{Dipartimento di Fisica, Università degli Studi di Genova}
-\date{\today}
-\version{0.1.1-bozza}
 
-\citation{These notes are a WiP, and might contain errors, typos and imprecisions. Please report any issue using the GitHub issue page on \url{https://gitlab.com/mattiasotgia/digital-electronic/-/issues} oppure per mail a \mail{s4942225@studenti.unige.it}. }{M. Sotgia}
+\author{Mattia Sotgia}
+\university{Dipartimento di Fisica, Università degli Studi di Genova and INFN, Sez. di Genova}
+\date{26th-30th Oct. 2026}
+\version{0.0a}
+
+\citation{These notes are a WiP, and might contain errors, typos and imprecisions. Please feel free to report any issue using the GitHub issue tracker page on \url{https://github.com/mattiasotgia/SOUPNotes/issues/} or contact me by e-mail \mail{mattia.sotgia@edu.unige.it}}{Mattia Sotgia}
 
 
 \begin{document}
@@ -23,8 +22,18 @@
     \tableofcontents
     \cleardoubleoddpage
     \pagenumbering{arabic}
-    
 
+
+    \include{parts/introduction}
+
+    \include{parts/dm}
+    \include{parts/neutrino_pheno}
+    \include{parts/noble_liquids}
+    \include{parts/statistics}
+    \include{parts/solid_state_detector}
+    \include{parts/axions}
+    \include{parts/scintillation}
+    \include{parts/material_screening}
 
 
 \end{document}
