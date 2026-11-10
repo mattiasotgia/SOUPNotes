@@ -8,7 +8,7 @@
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{scrreprt}}
 \ProcessOptions\relax
-\LoadClass[twoside=semi,chapterprefix]{scrreprt}
+\LoadClass[twoside=semi,chapterprefix,usegeometry]{scrreprt}
 
 % ----- Packages --------------------------------------------------------------
 
@@ -19,10 +19,13 @@
 
 % Fonts
 % \RequirePackage{newtxtext,newtxmath}
-\RequirePackage{helvet}
+% \RequirePackage{helvet}
+% \RequirePackage{marcellus}
 \RequirePackage{ebgaramond}
 \RequirePackage[ebgaramond,cmintegrals,cmbraces]{newtxmath}
 
+\RequirePackage{fontspec}
+\setsansfont{QTOptimum}
 
 % Required for starred commands
 \RequirePackage{suffix}
@@ -47,7 +50,6 @@
 \RequirePackage{graphicx}
 \RequirePackage{subfig}
 \RequirePackage{grffile}
-\RequirePackage[all]{xy}
 \RequirePackage{wrapfig}
 \RequirePackage{fancyvrb}
 \RequirePackage{listings}
@@ -66,7 +68,8 @@
     right=2.5cm,
     %right=5.5cm,
     %left=2.5cm,
-    marginparwidth=4cm
+    marginparwidth=4cm,
+    includeheadfoot
 ]{geometry}
 
 % Links
@@ -187,8 +190,9 @@
     {\@hangfrom{#2}{#3}}% original definition for other commands with style=chapter
 }
 
-\usepackage{mparhack}
-\usepackage{scrlayer-notecolumn}
+\RequirePackage{marginnote}
+\RequirePackage{mparhack}
+\RequirePackage{scrlayer-notecolumn}
 
 \RedeclareSectionCommand[
     afterskip=-\parindent
@@ -297,7 +301,7 @@
 
 % -----------------------------------------------------------------------------
 
-\usepackage[left]{showlabels}
+\RequirePackage[left]{showlabels}
 \renewcommand\showlabelfont{\footnotesize\ttfamily}
 
 
