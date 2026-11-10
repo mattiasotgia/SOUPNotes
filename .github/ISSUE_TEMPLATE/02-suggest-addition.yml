@@ -1,0 +1,130 @@
+
+name: "Suggest an addition"
+description: "Propose new content, figures, plots, examples, or references for the lecture notes."
+title: "[Suggestion] "
+labels:
+  - documentation
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing to these lecture notes!
+
+        Use this form to suggest additional material that could
+        improve the document, clarify a concept, or provide
+        further insight into the topics covered.
+
+        Suggestions can include figures, plots, explanations,
+        worked examples, exercises, articles, or other resources.
+
+  - type: dropdown
+    id: addition_type
+    attributes:
+      label: Type of addition
+      description: What would you like to suggest?
+      options:
+        - Figure or illustration
+        - Plot or diagram
+        - Text or theoretical explanation
+        - Worked example or derivation
+        - Exercise or problem
+        - Article or scientific paper
+        - Book or other reference
+        - External resource or link
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Suggested location
+      description: |
+        Where should this material be included?
+        Specify a page, section, subsection, or topic.
+      placeholder: "e.g. Section 3.2, after Equation (15)"
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: Title or short description
+      description: Give your suggestion a concise title.
+      placeholder: "e.g. Visual representation of the Fourier transform"
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: |
+        Why do you think this addition would be useful?
+        What concept would it clarify or what gap would it fill?
+      placeholder: |
+        e.g. A visual representation would help understand
+        the relationship between the time and frequency domains.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Description of the proposed addition
+      description: |
+        Describe what you would like to see included.
+        If possible, provide the actual text, equations,
+        figure description, plot specifications, or other content.
+      placeholder: |
+        Describe your proposal here...
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References and external resources
+      description: |
+        Provide links to relevant articles, scientific papers,
+        textbooks, websites, or other supporting material.
+      placeholder: |
+        - https://...
+        - Author et al., Journal, Year
+    validations:
+      required: false
+
+  - type: textarea
+    id: assets
+    attributes:
+      label: Suggested figures, plots, or attachments (optional)
+      description: |
+        If you have an example figure, plot, image, or other
+        resource in mind, describe it here and include relevant
+        links. You can also attach files after submitting the issue.
+      placeholder: |
+        Describe the proposed figure or provide a link...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Perceived importance
+      description: How important do you think this addition is?
+      options:
+        - Essential for understanding the topic
+        - Would significantly improve the notes
+        - Useful additional material
+        - Further reading / optional resource
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked that this suggestion has not already been proposed.
+          required: true

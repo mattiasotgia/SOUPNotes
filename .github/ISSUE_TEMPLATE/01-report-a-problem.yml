@@ -1,0 +1,98 @@
+
+name: "Report a typo or missing information"
+description: "Report typos, mistakes, unclear explanations, or missing information in the lecture notes."
+title: "[Correction] "
+labels:
+  - documentation
+  - correction
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve these lecture notes!
+
+        Use this form to report errors, typos, missing information,
+        unclear explanations, or other problems in the document.
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Type of issue
+      description: What kind of problem did you encounter?
+      options:
+        - Typo or grammatical error
+        - Incorrect information or equation
+        - Missing information or explanation
+        - Unclear or ambiguous explanation
+        - Missing or incorrect reference
+        - Broken link
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location in the document
+      description: |
+        Specify the page, section, subsection, or equation number.
+      placeholder: "e.g. Page 12, Section 3.2, Equation (15)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of the issue
+      description: |
+        Describe what is wrong or what information is missing.
+        Be as specific as possible.
+      placeholder: |
+        e.g. The derivation skips an intermediate step needed
+        to understand how Equation (15) is obtained.
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_content
+    attributes:
+      label: Current content (if applicable)
+      description: |
+        Quote the relevant passage, equation, or sentence.
+        If the information is missing, you can leave this blank.
+      placeholder: |
+        "The original text or equation..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggested_correction
+    attributes:
+      label: Suggested correction or missing information
+      description: |
+        If possible, provide a corrected version or describe
+        what should be added to address the issue.
+      placeholder: |
+        e.g. Include the intermediate calculation showing that...
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Supporting references (optional)
+      description: |
+        Include links to textbooks, papers, lecture slides,
+        or other sources that support your report.
+      placeholder: |
+        https://...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked that this issue has not already been reported.
+          required: true
